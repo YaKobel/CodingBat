@@ -174,12 +174,20 @@
 #
 #   return count
 #
-# # not work all (idea for task)
+# # 1 Correct for more than half the tests
 # def last2(str):
 #   compStr = str[len(str) -2: len(str)]
 #   newStr = str.replace(compStr, "")
 #   return (len(str)- len(newStr))/2 -1
   
+  
+ # 2 Correct for more than half the tests
+def last2(str):
+  if len(str) < 2:
+    return 0
+  i = str[-2:]
+  return str[:-1].count(i)
+
   
 #  Given an array of ints, return the number of 9's in the array.
 
@@ -199,8 +207,11 @@
 # def array_count9(nums):
 #   crt = nums.count(9)
 #   return crt
-#
-#
+
+
+def array_count9(nums):
+  return nums.count(9)
+
 #
 # def array_count9(nums):
 #   count = 0
@@ -228,8 +239,8 @@
 #       return True
 #   return False
 #
-#
-#
+
+
 # def array_front9(nums):
 #   return 9 in nums[0:4]
 #
@@ -244,3 +255,69 @@
 #     if nums[i] == 9:
 #       return True
 #   return False
+
+
+
+Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 1, 2, 4, 1]) → False
+array123([1, 1, 2, 1, 2, 3]) → True
+
+
+def array123(nums):
+  for i in range(len(nums)-2):
+    if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
+      return True
+  return False
+  
+  
+  
+ Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+string_match('xxcaazz', 'xxbaaz') → 3
+string_match('abc', 'abc') → 2
+string_match('abc', 'axc') → 0
+
+ 
+def string_match(a, b):
+  l = min(len(a),len(b))
+  ctr = 0 #keep track of the number of overlaps
+
+  for i in range(0, l - 1, 1):
+    if a[i:i + 2] == b[i:i + 2]:
+      ctr = ctr + 1
+  return ctr
+ 
+ 
+ 
+def string_match(a, b):
+  # Figure which string is shorter.
+  shorter = min(len(a), len(b))
+  count = 0
+  
+  # Loop i over every substring starting spot.
+  # Use length-1 here, so can use char str[i+1] in the loop
+  for i in range(shorter-1):
+    a_sub = a[i:i+2]
+    b_sub = b[i:i+2]
+    if a_sub == b_sub:
+      count = count + 1
+
+  return count
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
