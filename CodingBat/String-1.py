@@ -28,13 +28,13 @@
 
 # The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example, the "i" tag makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
 
-make_tags('i', 'Yay') → '<i>Yay</i>'
-make_tags('i', 'Hello') → '<i>Hello</i>'
-make_tags('cite', 'Yay') → '<cite>Yay</cite>'
+# make_tags('i', 'Yay') → '<i>Yay</i>'
+# make_tags('i', 'Hello') → '<i>Hello</i>'
+# make_tags('cite', 'Yay') → '<cite>Yay</cite>'
 
 
-def make_tags(tag, word):
-  return "<{}>{}</{}>".format(tag, word, tag)
+# def make_tags(tag, word):
+#   return "<{}>{}</{}>".format(tag, word, tag)
 
 # def make_tags(tag, word):
 #   return "<" + tag + ">" + word + "</" + tag + ">"
@@ -76,13 +76,13 @@ def make_tags(tag, word):
 #  return str[-2:] * 3
 
 
-def extra_end(str):
-  l = len(str)
-  newStr = ""
-  
-  for i in range(0,3,1):
-    newStr = newStr + str[l - 2: l]
-  return newStr
+# def extra_end(str):
+#   l = len(str)
+#   newStr = ""
+#
+#   for i in range(0,3,1):
+#     newStr = newStr + str[l - 2: l]
+#   return newStr
   
 
 
@@ -92,8 +92,8 @@ def extra_end(str):
 # first_two('abcdefg') → 'ab'
 # first_two('ab') → 'ab'
 #
-def first_two(str):
-  return str[0:2]
+# def first_two(str):
+#   return str[0:2]
 
 # def first_two(str):
 #   if (len > 2):
@@ -117,11 +117,10 @@ def first_two(str):
 # def first_half(str):
 #   return str[:len(str)/2]
 
-def first_half(str):
-  l = len(str)
-  return str[0:l/2]
-  
-  
+# def first_half(str):
+#   l = len(str)
+#   return str[0:l/2]
+
   
 #  Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
 
@@ -138,61 +137,61 @@ def first_half(str):
   
 #  Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
 
-combo_string('Hello', 'hi') → 'hiHellohi'
-combo_string('hi', 'Hello') → 'hiHellohi'
-combo_string('aaa', 'b') → 'baaab'
+# combo_string('Hello', 'hi') → 'hiHellohi'
+# combo_string('hi', 'Hello') → 'hiHellohi'
+# combo_string('aaa', 'b') → 'baaab'
 
-def combo_string(a, b):
-  if len(a) > len(b):
-    return b + a + b
-  return a + b + a
+# def combo_string(a, b):
+#   if len(a) > len(b):
+#     return b + a + b
+#   return a + b + a
 
 
-def combo_string(a, b):
-  longStr = a
-  shortStr = b
-  
-  if len(b) > len(a):
-    longStr = b
-    shortStr = a
-    
-  return shortStr + longStr + shortStr
+# def combo_string(a, b):
+#   longStr = a
+#   shortStr = b
+#
+#   if len(b) > len(a):
+#     longStr = b
+#     shortStr = a
+#
+#   return shortStr + longStr + shortStr
 
   
   
   
  # Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
 
-non_start('Hello', 'There') → 'ellohere'
-non_start('java', 'code') → 'avaode'
-non_start('shotl', 'java') → 'hotlava'
+# non_start('Hello', 'There') → 'ellohere'
+# non_start('java', 'code') → 'avaode'
+# non_start('shotl', 'java') → 'hotlava'
+#
+# def non_start(a, b):
+#   return a[1:] + b[1:]
 
-def non_start(a, b):
-  return a[1:] + b[1:]
+  
+  
+# def non_start(a, b):
+#   la = len(a)
+#   lb = len(b)
+  
+#   return a[1:la] + b[1:lb]
 
-  
-  
-def non_start(a, b):
-  la = len(a)
-  lb = len(b)
-  
-  return a[1:la] + b[1:lb]
-  
-  
-def non_start(a, b):
-  return a[1:len(a)] + b[1:len(b)]  
+
+# def non_start(a, b):
+#   return a[1:len(a)] + b[1:len(b)]
   
   
 #  Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
 
-left2('Hello') → 'lloHe'
-left2('java') → 'vaja'
-left2('Hi') → 'Hi'
+# left2('Hello') → 'lloHe'
+# left2('java') → 'vaja'
+# left2('Hi') → 'Hi'
 
 
-def left2(str):
-  return str[2:] + str[:2]
-  
-  def left2(str):
-  return str[2:len(str)] + str[:2]
+# def left2(str):
+#   return str[2:] + str[:2]
+#
+#   def left2(str):
+#   return str[2:len(str)] + str[:2]
 
