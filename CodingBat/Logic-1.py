@@ -97,9 +97,9 @@ def caught_speeding(speed, is_birthday):
 
 # Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden, so in that case just return 20.
 
-sorta_sum(3, 4) → 7
-sorta_sum(9, 4) → 20
-sorta_sum(10, 11) → 21
+# sorta_sum(3, 4) → 7
+# sorta_sum(9, 4) → 20
+# sorta_sum(10, 11) → 21
 
 '''
 def sorta_sum(a, b):
@@ -113,9 +113,9 @@ def sorta_sum(a, b):
   
 # Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, return a string of the form "7:00" indicating when the alarm clock should ring. Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we are on vacation -- then on weekdays it should be "10:00" and weekends it should be "off".
 
-alarm_clock(1, False) → '7:00'
-alarm_clock(5, False) → '7:00'
-alarm_clock(0, False) → '10:00'
+# alarm_clock(1, False) → '7:00'
+# alarm_clock(5, False) → '7:00'
+# alarm_clock(0, False) → '10:00'
 
 '''
 def alarm_clock(day, vacation):
@@ -174,11 +174,11 @@ def love6(a, b):
 
 
 
-Given a number n, return True if n is in the range 1..10, inclusive. Unless outside_mode is True, in which case return True if the number is less or equal to 1, or greater or equal to 10.
-
-in1to10(5, False) → True
-in1to10(11, False) → False
-in1to10(11, True) → True
+# Given a number n, return True if n is in the range 1..10, inclusive. Unless outside_mode is True, in which case return True if the number is less or equal to 1, or greater or equal to 10.
+#
+# in1to10(5, False) → True
+# in1to10(11, False) → False
+# in1to10(11, True) → True
 
 '''
 def in1to10(n, outside_mode):
@@ -190,11 +190,11 @@ def in1to10(n, outside_mode):
 '''
 
 
-Given a non-negative number "num", return True if num is within 2 of a multiple of 10. Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2. See also: Introduction to Mod
-
-near_ten(12) → True
-near_ten(17) → False
-near_ten(19) → True
+# Given a non-negative number "num", return True if num is within 2 of a multiple of 10. Note: (a % b) is the remainder of dividing a by b, so (7 % 5) is 2. See also: Introduction to Mod
+#
+# near_ten(12) → True
+# near_ten(17) → False
+# near_ten(19) → True
 
 
 '''
@@ -208,8 +208,8 @@ def near_ten(num):
   return num%10 == 8 or num%10 == 9 or num%10 == 0 or num%10 == 1 or num%10 == 2
 '''
 
-def near_ten(num):
-  return 0 <= (num%10 + 2) % 10 <= 4
+# def near_ten(num):
+#   return 0 <= (num%10 + 2) % 10 <= 4
 
 
 
